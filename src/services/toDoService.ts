@@ -17,7 +17,7 @@ export const ToDoService = {
     async (arg, { rejectWithValue }) => {
       try {
         const { data } = await API.get('/todos')
-        return data;
+        return data.data;
       } catch (error) {
         return rejectWithValue(errorFunc(error))
       }
@@ -27,8 +27,9 @@ export const ToDoService = {
     'TODO/getToById',
     async (arg: string, { rejectWithValue }) => {
       try {
-        const { data } = await API.post(`/todos/${arg}`)
-        return data;
+        const { data } = await API.get(`/todos/${arg}`)
+        console.log(data)
+        return data.data;
       } catch (error) {
         return rejectWithValue(errorFunc(error))
       }
@@ -53,7 +54,7 @@ export const ToDoService = {
     async (arg: updateToDoData, { dispatch, rejectWithValue }) => {
       try {
         const todoData = delete {...arg}.id
-        const { data } = await API.post(`/todos/${arg.id}`, todoData)
+        const { data } = await API.put(`/todos/${arg.id}`, todoData)
         if (data) {
           dispatch(ToDoService.getToDos());
         }
@@ -67,7 +68,7 @@ export const ToDoService = {
     'TODO/deleteToDo',
     async (arg: string, { dispatch, rejectWithValue }) => {
       try {
-        const { data } = await API.post(`/todos/${arg}`)
+        const { data } = await API.delete(`/todos/${arg}`)
         if (data) {
           dispatch(ToDoService.getToDos());
         }
@@ -77,16 +78,4 @@ export const ToDoService = {
       }
     }
   )
-}
-
-export const validateEmail = (email: string) => {
-  return String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
-};
-
-export const validatePassword = (password: string) => {
-  return password.length >= 8 ? password : null;
 }

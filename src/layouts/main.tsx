@@ -7,7 +7,7 @@ import PrivateRoute from "../components/privateRoute";
 
 const Main = () => {
   return (
-    <main className="w-full h-screen flex flex-col justify-center items-center text-[#1b1b1b] bg-white">
+    <main className="w-full h-screen flex flex-col justify-center items-center text-[#1b1b1b] bg-white pt-[40px]">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />

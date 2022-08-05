@@ -1,48 +1,34 @@
 import {createSlice} from "@reduxjs/toolkit";
 import {ToDoService} from "../../services/toDoService";
-
-export type ToDoList = {
-  title: string,
-  content: string,
-  id: string,
-  createdAt: string,
-  updatedAt: string,
-}
+import {ToDoList} from "./toDoListsSlice";
 
 export type ToDoListState = {
   error: string | undefined,
-  data: ToDoList[] | ToDoList,
+  data: ToDoList,
 }
 
 const initialState: ToDoListState = {
   error: '',
-  data: [{
+  data: {
     title : '',
     content : '',
     id : '',
     createdAt : '',
     updatedAt : ''
-  }]
+  }
 }
 
-export const toDoSlice = createSlice({
-  name: 'TODO',
+export const toDoListSlice = createSlice({
+  name: 'TODOLIST',
   initialState,
-  reducers: {},
+  reducers: {
+    // showList(state, action) {
+    //   state.data = action.payload;
+    //   state.error = '';
+    // }
+  },
   extraReducers: (builder) => {
     builder
-      .addCase(ToDoService.getToDos.fulfilled, (state, action) => {
-        state.data = action.payload;
-        state.error = '';
-      })
-      .addCase(ToDoService.getToDos.rejected, (state, action) => {
-        state.data = initialState.data;
-        if (action.payload) {
-          state.error = action.payload as string;
-        } else {
-          state.error = 'Something went wrong.'
-        }
-      })
       .addCase(ToDoService.getToById.fulfilled, (state, action) => {
         state.data = action.payload;
         state.error = '';
@@ -83,7 +69,7 @@ export const toDoSlice = createSlice({
         // state.data = action.payload;
         // state.error = '';
       })
-      .addCase(ToDoService.updateToDo.rejected, (state, action) => {
+      .addCase(ToDoService.deleteToDo.rejected, (state, action) => {
         state.data = initialState.data;
         if (action.payload) {
           state.error = action.payload as string;
@@ -93,3 +79,6 @@ export const toDoSlice = createSlice({
       })
   }
 })
+
+
+// export const { showList } = toDoListSlice.actions;

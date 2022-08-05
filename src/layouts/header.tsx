@@ -9,7 +9,7 @@ const Header = () => {
   const { data } = useAppSelector(state => state.authSlice);
 
   return (
-    <header className="w-full h-[40px] flex justify-center items-center">
+    <header className="fixed w-full h-[40px] flex justify-center items-center">
       <div className="container flex justify-between items-center px-5">
         <Link to="/">
           <span className="text-xl text-[#195dae] font-bold">To Do List</span>
