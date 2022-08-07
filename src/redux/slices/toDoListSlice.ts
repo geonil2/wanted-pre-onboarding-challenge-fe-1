@@ -54,7 +54,7 @@ export const toDoListSlice = createSlice({
         }
       })
       .addCase(ToDoService.updateToDo.fulfilled, (state, action) => {
-        state.data = action.payload;
+        state.data = action.payload.data;
         state.error = '';
       })
       .addCase(ToDoService.updateToDo.rejected, (state, action) => {
@@ -66,8 +66,8 @@ export const toDoListSlice = createSlice({
         }
       })
       .addCase(ToDoService.deleteToDo.fulfilled, (state, action) => {
-        // state.data = action.payload;
-        // state.error = '';
+        state.data = initialState.data;
+        state.error = '';
       })
       .addCase(ToDoService.deleteToDo.rejected, (state, action) => {
         state.data = initialState.data;

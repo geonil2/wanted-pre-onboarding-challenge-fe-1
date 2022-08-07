@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15d95194-66ba-4e02-b7dc-f6998207b18d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/toDoDetail.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/toDoLists.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/toDoListSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/toDoListsSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/todo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/todoSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/toDoDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toDoDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/toDoListSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/toDoListSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/toDoService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/toDoService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659577114543</updated>
       <workItem from="1659577115710" duration="36093000" />
-      <workItem from="1659687297407" duration="1392000" />
+      <workItem from="1659687297407" duration="3436000" />
     </task>
     <servers />
   </component>

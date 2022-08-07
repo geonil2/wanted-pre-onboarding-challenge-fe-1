@@ -53,11 +53,12 @@ export const ToDoService = {
     'TODO/updateToDo',
     async (arg: updateToDoData, { dispatch, rejectWithValue }) => {
       try {
-        const todoData = delete {...arg}.id
-        const { data } = await API.put(`/todos/${arg.id}`, todoData)
+        const { id, title, content } = arg;
+        const { data } = await API.put(`/todos/${id}`, { title, content })
         if (data) {
           dispatch(ToDoService.getToDos());
         }
+        console.log(data, 'bbb')
         return data;
       } catch (error) {
         return rejectWithValue(errorFunc(error))

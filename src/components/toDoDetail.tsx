@@ -10,6 +10,11 @@ const ToDoDetail = () => {
   const [selectedList, setSelectedList] = useState<ToDoData>({ title: '', content: '' })
   const [inputDisabled, setInputDisabled] = useState(true);
 
+  const onClickSaveBtn = () => {
+    setNewList({ title: '', content: '' });
+    dispatch(ToDoService.createToDo(newList))
+  }
+
   const setSelectedData = () => {
     const { title, content } = data
     setSelectedList({ title, content })
@@ -32,6 +37,7 @@ const ToDoDetail = () => {
           <label htmlFor="">Title</label>
           <input
             type="text"
+            value={newList.title}
             onChange={(e) => setNewList({ ...newList, title: e.target.value })}
             className="w-[300px] text-sm bg-transparent ring-1 ring-slate-700/10 p-1 mt-1 focus:outline-none"
           />
@@ -40,12 +46,13 @@ const ToDoDetail = () => {
           <label htmlFor="">Content</label>
           <input
             type="text"
+            value={newList.content}
             onChange={(e) => setNewList({ ...newList, content: e.target.value })}
             className="w-[100%] text-sm bg-transparent ring-1 ring-slate-700/10 p-1 mt-1 focus:outline-none"
           />
         </div>
         <button
-          onClick={() => dispatch(ToDoService.createToDo(newList))}
+          onClick={() => onClickSaveBtn()}
           className="w-full pointer-events-auto rounded-md text-center font-medium shadow-sm ring-1 ring-slate-700/10 py-2 px-4 mt-4 hover:bg-slate-50"
         >Save</button>
       </div>
@@ -94,6 +101,7 @@ const ToDoDetail = () => {
                 >Remove
                 </button>
                 <button
+                  onClick={() => dispatch(ToDoService.updateToDo({ ...selectedList, id: data.id }))}
                   className="w-[49%] pointer-events-auto rounded-md text-center font-medium shadow-sm ring-1 ring-slate-700/10 py-2 px-4 mt-4 hover:bg-slate-50"
                 >Update
                 </button>
