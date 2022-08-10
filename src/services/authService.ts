@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import {API, errorFunc} from "./api";
 
-export type UserData = {
+export type User = {
   email: string,
   password: string
 }
@@ -9,7 +9,7 @@ export type UserData = {
 export const AuthService = {
   logIn: createAsyncThunk(
     'AUTH/logIn',
-    async (arg: UserData, { rejectWithValue }) => {
+    async (arg: User, { rejectWithValue }) => {
       try {
         const { data } = await API.post('/users/login', arg)
         return data;
@@ -20,7 +20,7 @@ export const AuthService = {
   ),
   signUp: createAsyncThunk(
     'AUTH/signUp',
-    async (arg: UserData, { rejectWithValue }) => {
+    async (arg: User, { rejectWithValue }) => {
       try {
         const { data } = await API.post('/users/create', arg)
         return data;

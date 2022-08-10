@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15d95194-66ba-4e02-b7dc-f6998207b18d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/authForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useForm.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/toDoDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toDoDetail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/toDoListSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/toDoListSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/toDoService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/toDoService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logIn.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/signUp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/signUp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/todo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/todo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -63,7 +72,9 @@
       <option name="presentableId" value="Default" />
       <updated>1659577114543</updated>
       <workItem from="1659577115710" duration="36093000" />
-      <workItem from="1659687297407" duration="3436000" />
+      <workItem from="1659687297407" duration="5164000" />
+      <workItem from="1659921093353" duration="1084000" />
+      <workItem from="1660044817664" duration="15633000" />
     </task>
     <servers />
   </component>
@@ -80,16 +91,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/pages/auth.tsx</url>
-          <line>32</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

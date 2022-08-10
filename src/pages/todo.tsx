@@ -7,7 +7,7 @@ import {useAppDispatch} from "../redux/store";
 
 const Todo = () => {
   return (
-    <section className="w-full h-[calc(100%-40px)]  flex justify-between items-start p-[40px]">
+    <section className="w-full h-[calc(100%-40px)] flex justify-between items-start p-[40px]">
       <ToDoLists />
       <ToDoDetail />
     </section>

@@ -1,8 +1,8 @@
 import React from 'react';
-import {AuthService, UserData} from "../services/authService";
+import {AuthService, User} from "../services/authService";
 import {useAppDispatch} from "../redux/store";
 
-const LogIn = ({userInfo, setUserInfo, setShowSignUp, submitBtnDisabled} : {userInfo: UserData, setUserInfo: React.Dispatch<React.SetStateAction<UserData>>, setShowSignUp: React.Dispatch<React.SetStateAction<boolean>>, submitBtnDisabled: boolean}) => {
+const LogIn = ({userInfo, setUserInfo, setShowSignUp, submitBtnDisabled} : {userInfo: User, setUserInfo: React.Dispatch<React.SetStateAction<User>>, setShowSignUp: React.Dispatch<React.SetStateAction<boolean>>, submitBtnDisabled: boolean}) => {
   const dispatch = useAppDispatch();
 
   return (
