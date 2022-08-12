@@ -10,10 +10,10 @@ interface UseFormProps {
   // validate: (form: FormType) => FormType;
 }
 
-const useForm = ({ initialState }: UseFormProps) => {
+const useAuthForm = ({ initialState }: UseFormProps) => {
   const { data } = useAppSelector(state => state.authSlice);
   const dispatch = useAppDispatch();
-  const [formType, setFormType] = useState<FormType>("Log In")
+  const [formType, setFormType] = useState<FormType>("Log In");
   const [userInputState, setUserState] = useState<User>(initialState);
   const [isDisabledButton, setIsDisabledButton] = useState(true);
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const useForm = ({ initialState }: UseFormProps) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    formType === 'Log In' ? dispatch(AuthService.logIn(userInputState)) : dispatch(AuthService.signUp(userInputState))
+    formType === 'Log In' ? dispatch(AuthService.logIn(userInputState)) : dispatch(AuthService.signUp(userInputState));
   }
 
   useEffect(() => {
@@ -50,4 +50,4 @@ const useForm = ({ initialState }: UseFormProps) => {
   return { userInputState, formType, handleFormType, isDisabledButton, enterUserInfo, handleSubmit };
 };
 
-export default useForm;
+export default useAuthForm;

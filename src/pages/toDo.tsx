@@ -1,17 +1,18 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useDispatch} from "react-redux";
 import ToDoLists from "../components/toDoLists";
 import ToDoDetail from "../components/toDoDetail";
 import {ToDoService} from "../services/toDoService";
 import {useAppDispatch} from "../redux/store";
+import ToDoModal from "../components/toDoModal";
 
-const Todo = () => {
+const ToDo = () => {
   return (
-    <section className="w-full h-[calc(100%-40px)] flex justify-between items-start p-[40px]">
+    <section className="w-full h-[calc(100%-40px)] flex justify-center items-start p-[40px]">
       <ToDoLists />
-      <ToDoDetail />
+      {/*<ToDoDetail />*/}
     </section>
   );
 };
 
-export default Todo;
+export default ToDo;

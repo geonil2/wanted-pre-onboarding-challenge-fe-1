@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
-import Todo from "../pages/todo";
+import ToDo from "../pages/toDo";
 import Home from "../pages/home";
 import Auth from "../pages/auth";
 import PrivateRoute from "../components/privateRoute";
@@ -11,7 +11,14 @@ const Main = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/auth" element={<Auth />} />
-        <Route path="/todo" element={<PrivateRoute path="/todo" element={<Todo />}/>} />
+        <Route path="/todo" element={<ToDo />} />
+        {/*<Route*/}
+        {/*  path="/todo"*/}
+        {/*  element={*/}
+        {/*  <PrivateRoute>*/}
+        {/*    <Todo />*/}
+        {/*  </PrivateRoute>}*/}
+        {/*/>*/}
       </Routes>
     </main>
   );

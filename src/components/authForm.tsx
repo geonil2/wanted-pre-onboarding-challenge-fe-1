@@ -92,18 +92,22 @@
 //
 // export default AuthForm;
 
-import React, {useEffect, useState} from 'react';
-import {AuthService, User, validateEmail, validatePassword} from "../services/authService";
-import {useAppDispatch, useAppSelector} from "../redux/store";
-import {useNavigate} from "react-router-dom";
-import useForm from "../hooks/useForm";
+import React from 'react';
+import useAuthForm from "../hooks/useAuthForm";
 
 export type FormType = "Log In" | "Sign Up";
 
 const AuthForm = () => {
-  const { userInputState, formType, handleFormType, isDisabledButton, enterUserInfo, handleSubmit } = useForm({
+  const {
+    userInputState,
+    formType,
+    handleFormType,
+    isDisabledButton,
+    enterUserInfo,
+    handleSubmit
+  } = useAuthForm({
     initialState: { email: "", password: "" }
-  })
+  });
 
   return (
     <form className="w-full" onSubmit={handleSubmit}>

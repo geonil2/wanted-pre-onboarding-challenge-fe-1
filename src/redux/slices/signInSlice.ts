@@ -33,7 +33,7 @@ export const authSlice = createSlice({
       state.data = initialState.data;
     },
     autoLogIn(state) {
-      console.log(token)
+      console.log(token, 'Auto Login Token')
       if (token) {
         state.data = { ...initialState.data, token};
       }
