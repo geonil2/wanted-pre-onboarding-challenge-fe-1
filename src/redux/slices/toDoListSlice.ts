@@ -54,8 +54,7 @@ export const toDoListSlice = createSlice({
         }
       })
       .addCase(ToDoService.updateToDo.fulfilled, (state, action) => {
-        state.data = action.payload.data;
-        state.error = '';
+        state = initialState;
       })
       .addCase(ToDoService.updateToDo.rejected, (state, action) => {
         state.data = initialState.data;

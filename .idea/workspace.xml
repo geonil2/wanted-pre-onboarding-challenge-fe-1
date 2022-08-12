@@ -5,24 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15d95194-66ba-4e02-b7dc-f6998207b18d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/newToDoListForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/selectedToDoListForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/toDoForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/toDoModal.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useToDoList.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/errorBanner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/auth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/privateRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/privateRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/privateRoute.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/toDoDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toDoDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/toDoForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toDoForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/toDoLists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toDoLists.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useForm.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useAuthForm.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/toDoModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/toDoModal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useToDoList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useToDoList.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/todo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/toDo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/toDo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/toDo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/slices/signInSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/signInSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/toDoListSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/toDoListSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/toDoListsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/toDoListsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/toDoService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/toDoService.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +88,7 @@
       <workItem from="1659687297407" duration="5164000" />
       <workItem from="1659921093353" duration="1084000" />
       <workItem from="1660044817664" duration="38326000" />
-      <workItem from="1660211090321" duration="7266000" />
+      <workItem from="1660211090321" duration="18749000" />
     </task>
     <servers />
   </component>
@@ -101,5 +105,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/home.tsx</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

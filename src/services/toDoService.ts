@@ -1,6 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios, {AxiosError} from "axios";
 import {API, errorFunc} from "./api";
+import {AuthService} from "./authService";
+import {signOut} from "../redux/slices/signInSlice";
 
 export type ToDoData = {
   title: string,
@@ -14,23 +16,25 @@ export type updateToDoData = ToDoData & {
 export const ToDoService = {
   getToDos: createAsyncThunk(
     'TODO/getToDos',
-    async (arg, { rejectWithValue }) => {
+    async (arg, {dispatch, rejectWithValue }) => {
       try {
         const { data } = await API.get('/todos')
         return data.data;
       } catch (error) {
+        dispatch(signOut());
         return rejectWithValue(errorFunc(error))
       }
     }
   ),
   getToById: createAsyncThunk(
     'TODO/getToById',
-    async (arg: string, { rejectWithValue }) => {
+    async (arg: string, { dispatch, rejectWithValue }) => {
       try {
         const { data } = await API.get(`/todos/${arg}`)
         console.log(data)
         return data.data;
       } catch (error) {
+        dispatch(signOut());
         return rejectWithValue(errorFunc(error))
       }
     }
@@ -45,6 +49,7 @@ export const ToDoService = {
         }
         return data;
       } catch (error) {
+        dispatch(signOut());
         return rejectWithValue(errorFunc(error))
       }
     }
@@ -58,9 +63,9 @@ export const ToDoService = {
         if (data) {
           dispatch(ToDoService.getToDos());
         }
-        console.log(data, 'bbb')
         return data;
       } catch (error) {
+        dispatch(signOut());
         return rejectWithValue(errorFunc(error))
       }
     }
@@ -69,12 +74,13 @@ export const ToDoService = {
     'TODO/deleteToDo',
     async (arg: string, { dispatch, rejectWithValue }) => {
       try {
-        const { data } = await API.delete(`/todos/${arg}`)
+        const { data } = await API.delete(`/todos/${arg}`);
         if (data) {
           dispatch(ToDoService.getToDos());
         }
         return data;
       } catch (error) {
+        dispatch(signOut());
         return rejectWithValue(errorFunc(error))
       }
     }

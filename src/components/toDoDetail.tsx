@@ -7,7 +7,7 @@ import SelectedToDoListForm from "./selectedToDoListForm";
 import NewToDoListForm from "./newToDoListForm";
 import ToDoForm from "./toDoForm";
 
-export type FormType = 'addToDoListForm' | 'selectedToDoListForm';
+
 
 
 const ToDoDetail = () => {

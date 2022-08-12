@@ -32,7 +32,6 @@ export const toDoListsSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(ToDoService.getToDos.fulfilled, (state, action) => {
-        console.log(action.payload, '123123')
         state.data = action.payload;
         state.error = '';
       })

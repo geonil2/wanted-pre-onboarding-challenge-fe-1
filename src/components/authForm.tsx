@@ -110,7 +110,10 @@ const AuthForm = () => {
   });
 
   return (
-    <form className="w-full" onSubmit={handleSubmit}>
+    <form
+      className="sm:w-[400px] w-[250px] h-1/2 flex flex-col justify-center items-center bg-white duration-200 p-5 drop-shadow-[0_35px_35px_rgba(25,93,174,1)]"
+      onSubmit={handleSubmit}
+    >
       <div className="flex justify-center items-center pb-10">
         <div className="text-xl text-[#195dae] font-bold">To Do List</div>
       </div>
@@ -123,6 +126,7 @@ const AuthForm = () => {
               type="text"
               value={userInputState.email}
               onChange={enterUserInfo}
+              autoComplete="username"
               className="w-full text-sm bg-transparent border border-solid border-[#1B1B1B] p-1 focus:border-[#195dae]"
             />
           </div>
@@ -135,6 +139,7 @@ const AuthForm = () => {
               type="password"
               value={userInputState.password}
               onChange={enterUserInfo}
+              autoComplete="current-password"
               className="w-full text-sm bg-transparent border border-solid border-[#1B1B1B] p-1 focus:border-[#195dae]"
             />
           </div>

@@ -3,14 +3,9 @@ import Header from "./layouts/header";
 import Main from "./layouts/main";
 import {useDispatch} from "react-redux";
 import {autoLogIn} from "./redux/slices/signInSlice";
+import ErrorBanner from "./components/errorBanner";
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(autoLogIn());
-  }, [])
-
   return (
     <>
       <Header />

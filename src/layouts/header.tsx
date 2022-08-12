@@ -18,16 +18,16 @@ const Header = () => {
           <ul className="flex justify-center items-center">
             {data.token ?
               <>
-                <li className="bg-[#195dae30] text-[#195dae] font-bold border-0 rounded cursor-pointer py-1 px-3 mr-4 hover:bg-[#195dae70]">
+                <li className="text-[#195dae] font-bold border-0 rounded cursor-pointer py-1 px-3 mr-4 hover:bg-[#195dae30]">
                   <Link to='/todo'>To Do</Link>
                 </li>
                 <li
-                  className="bg-[#195dae30] text-[#195dae] font-bold border-0 rounded cursor-pointer py-1 px-3 hover:bg-[#195dae70]"
+                  className="text-[#195dae] font-bold border-0 rounded cursor-pointer py-1 px-3 hover:bg-[#195dae30]"
                   onClick={() => dispatch(signOut())}
                 ><Link to='/'>Log Out</Link></li>
               </>
               :
-              <li className="bg-[#195dae30] text-[#195dae] font-bold border-0 rounded cursor-pointer py-1 px-3 hover:bg-[#195dae70]"
+              <li className="text-[#195dae] font-bold border-0 rounded cursor-pointer py-1 px-3 hover:bg-[#195dae30]"
               ><Link to='/auth'>Log In</Link></li>
             }
           </ul>

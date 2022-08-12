@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {AuthService} from "../../services/authService";
-import {token} from "../../services/api";
+import {getTokenInStorage, removeTokenInStorage, setTokenInStorage} from "../../utils/auth";
 
-type AuthData = {
+export type AuthData = {
   message: string,
   token: string
 }
@@ -33,10 +33,9 @@ export const authSlice = createSlice({
       state.data = initialState.data;
     },
     autoLogIn(state) {
-      console.log(token, 'Auto Login Token')
-      if (token) {
-        state.data = { ...initialState.data, token};
-      }
+      const token = getTokenInStorage();
+      console.log(token, '!@#!@#!@#!@#')
+      token ? state.data = { ...initialState.data, token} : state.error = 'Please try login'
     }
   },
   extraReducers: (builder) => {
@@ -50,6 +49,7 @@ export const authSlice = createSlice({
         state.loading = false;
         setTokenInStorage(action.payload.token)
         state.data = action.payload;
+        state.error = '';
       })
       .addCase(AuthService.logIn.rejected, (state, action) => {
         state.loading = false;
@@ -68,6 +68,7 @@ export const authSlice = createSlice({
         state.loading = false;
         setTokenInStorage(action.payload.token)
         state.data = action.payload;
+        state.error = '';
       })
       .addCase(AuthService.signUp.rejected, (state, action) => {
         state.loading = false;
@@ -81,11 +82,3 @@ export const authSlice = createSlice({
 });
 
 export const { signOut, autoLogIn } = authSlice.actions;
-
-export const setTokenInStorage = (authData: AuthData) => {
-    window.localStorage.setItem('Token', JSON.stringify(authData));
-}
-
-const removeTokenInStorage = () => {
-    window.localStorage.removeItem('Token');
-}
