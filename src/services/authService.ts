@@ -42,3 +42,16 @@ export const validateEmail = (email: string) => {
 export const validatePassword = (password: string) => {
   return password.length >= 8 ? password : null;
 }
+
+// Refactoring
+export const AuthService2 = {
+  logIn: async (user: User) => {
+    const { data } = await API.post('/users/login', user);
+    return data
+  },
+  signUp: async (user: User) => {
+    const { data } = await API.post('/users/create', user)
+    return data;
+  },
+}
+

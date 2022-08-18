@@ -2,12 +2,7 @@ import axios, {AxiosError, AxiosInstance} from "axios";
 import {getTokenInStorage} from "../utils/auth";
 import {useAppSelector} from "../redux/store";
 
-// const tokenInStorage = localStorage.getItem('Token');
-// export const token = tokenInStorage ? JSON.parse(tokenInStorage) : '';
-
-export const API = axios.create({
-  baseURL: 'http://localhost:8080',
-});
+export const API = axios.create({ baseURL: 'http://localhost:8080' });
 
 API.interceptors.request.use(
   function (config) {
@@ -16,7 +11,6 @@ API.interceptors.request.use(
       Accept: "application/json",
       Authorization: token ? `Bearer ${token}` : '',
     };
-    console.log(headers, '1!!')
     config.headers = headers;
     return config;
   },
