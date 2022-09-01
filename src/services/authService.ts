@@ -47,6 +47,7 @@ export const validatePassword = (password: string) => {
 export const AuthService2 = {
   logIn: async (user: User) => {
     const { data } = await API.post('/users/login', user);
+    console.log(data)
     return data
   },
   signUp: async (user: User) => {

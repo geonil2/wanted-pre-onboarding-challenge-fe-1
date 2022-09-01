@@ -21,11 +21,13 @@ API.interceptors.request.use(
 );
 
 export const errorFunc = (error: any) => {
+  console.log(error)
   if (error instanceof AxiosError && error.response) {
     if (typeof error.response.data.details !== 'undefined') {
       return error.response.data.details;
     }
     return error.response.data;
   }
-  throw error;
+  // throw error;
+  return '';
 }
