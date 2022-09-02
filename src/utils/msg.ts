@@ -11,7 +11,6 @@ const onMsg = (message: string, type: MsgType) => {
     });
   }
   if (type === "error") {
-    console.log(message)
     toast.error(message, {
       autoClose: 3000,
       position: toast.POSITION.TOP_RIGHT,

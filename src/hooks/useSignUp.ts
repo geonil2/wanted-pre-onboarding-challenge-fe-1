@@ -7,7 +7,7 @@ import {errorFunc} from "../services/api";
 const UseSignUp = () => {
   const navigate = useNavigate();
 
-  return useMutation((user: User) => AuthService2.signUp(user), {
+  return useMutation(AuthService2.signUp, {
     onSuccess: (data) => {
       setTokenInStorage(data.token);
       navigate('/');

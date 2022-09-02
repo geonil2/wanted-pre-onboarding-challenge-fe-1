@@ -46,9 +46,8 @@ export const validatePassword = (password: string) => {
 // Refactoring
 export const AuthService2 = {
   logIn: async (user: User) => {
-    const { data } = await API.post('/users/login', user);
-    console.log(data)
-    return data
+    const { data } = await API.post('/users/login', user)
+    return data;
   },
   signUp: async (user: User) => {
     const { data } = await API.post('/users/create', user)
