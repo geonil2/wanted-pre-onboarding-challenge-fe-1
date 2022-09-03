@@ -4,7 +4,7 @@ import {setTokenInStorage} from "../utils/auth";
 import {useNavigate} from "react-router-dom";
 import {errorFunc} from "../services/api";
 
-const UseSignUp = () => {
+const useSignUp = () => {
   const navigate = useNavigate();
 
   return useMutation(AuthService2.signUp, {
@@ -18,4 +18,4 @@ const UseSignUp = () => {
   });
 };
 
-export default UseSignUp;
+export default useSignUp;

@@ -5,10 +5,10 @@ import {useNavigate} from "react-router-dom";
 import {errorFunc} from "../services/api";
 import onMsg from "../utils/msg";
 
-const UseLogIn = () => {
+const useLogIn = () => {
   const navigate = useNavigate();
 
-  return useMutation(AuthService2.logIn, {
+  return useMutation((user: User) => AuthService2.logIn(user), {
     onSuccess: (data) => {
       console.log(data, 'data...')
       setTokenInStorage(data.token);
@@ -22,4 +22,4 @@ const UseLogIn = () => {
   });
 };
 
-export default UseLogIn;
+export default useLogIn;
